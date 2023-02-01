@@ -1,0 +1,6 @@
+@charset "UTF-8";
+@import 'https://unpkg.com/@acab/reset.css';
+
+textarea {
+    resize: none;
+  }
