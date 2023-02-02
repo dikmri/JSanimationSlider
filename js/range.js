@@ -1,27 +1,25 @@
-//スライダー値を取得して表示
-const setValue = ()=> {
-    let value = iRange.value;
-    opRange.textContent = value;
-}
-
 //起動時の処理
 window.addEventListener("load", ()=> {
     //スライダー、スライダー値DOM
-    let iRange = document.getElementById("iRange");
-    let opRange = document.getElementById("opRange");
+    let posRange = document.getElementById("posRange");
     let tlRange = document.getElementById("tlRange");
+    let posArea = document.getElementById("posArea");
+    let tlArea = document.getElementById("tlArea");
+    
 
     //スライドさせたときの処理
-    iRange.addEventListener("input",setValue);
+    posRange.addEventListener("input",setValue);
+    tlRange.addEventListener("input",setValue);
+
 
     //スライダー初期値を表示
     setValue();
 })
 
-// TODO tlRangeが動くようにする 20230130
-function range(){
-    let iRange = document.getElementById("iRange");
-    let tlRange = document.getElementById("tlRange");
-
-    tlRange.value = iRange.value;
+//スライダー値を取得して表示
+const setValue = ()=> {
+    posArea.textContent = posRange.value;
+    tlArea.textContent = tlRange.value;
 }
+
+// TODO スライダーの位置を合わせる20220202
